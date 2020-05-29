@@ -51,13 +51,13 @@ export default function LineNumber(props) {
         }
         return data;
     }
-    const imageData = determineImage(props.data.info[0].lineNumber)
+    const imageData = determineImage(props.data.info.lineNumber)
     return (
         <div className='line-number'>
             <div className={`line-number-img-wrapper ${imageData.css}`}>
                 <img src={`/icons/bus-and-tram/${imageData.image}.svg`}/>
             </div>
-        <h2>{props.data.info[0].lineNumber}</h2>
+        <h2>{props.data.info.lineNumber}</h2>
         </div>
     )
 }

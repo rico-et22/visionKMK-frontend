@@ -7,7 +7,9 @@ import Navbar from '../../components/Navbar'
 import {GridContainer, Left, Right} from '../../components/GridContainer'
 import TTInfo from '../../components/TTInfo'
 import LineList from '../../components/LineList'
-import TTHTMLTable from '../../components/TTHTMLTable'
+import StopList from '../../components/StopList'
+import TTHTMLTableContainer from '../../components/TTHTMLTable'
+import Footer from '../../components/Footer'
 import BottomNavbar from '../../components/BottomNavbar'
 import dynamic from 'next/dynamic'
 const TTTimeModal = dynamic(
@@ -45,14 +47,15 @@ export default function TimeTable(props) {
             <GridContainer>
                 <Left>
                     <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher} side/>
+                    <StopList data={props.TT} activeStop={props.stopNumber} side/>
                     <LineList lines={props.lines}/>
                 </Left>
                 <Right>
                     <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher} mobile/>
-                    {slug.line} {slug.variant} {slug.stop}
-                    <TTHTMLTable data={props.TT.html}/>
+                    <TTHTMLTableContainer data={props.TT}/>
                 </Right>
             </GridContainer>
+            <Footer/>
             <BottomNavbar activePage='/'/>
             <TTTimeModal open={timeModalOpen} data={props.info} closeSwitcher={TTTimeSwitcher}/>
             <LegendModal open={legendModalOpen} closeSwitcher={legendSwitcher}/>
@@ -74,7 +77,8 @@ export async function getServerSideProps(context) {
         props: {
             info,
             lines,
-            TT
+            TT,
+            stopNumber
         },
     }
 }

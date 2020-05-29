@@ -7,6 +7,7 @@ import {GridContainer, Left, Right} from '../../components/GridContainer'
 import TTInfo from '../../components/TTInfo'
 import LineList from '../../components/LineList'
 import VariantSwitcher from '../../components/VariantSwitcher'
+import Footer from '../../components/Footer'
 import BottomNavbar from '../../components/BottomNavbar'
 import dynamic from 'next/dynamic'
 const TTTimeModal = dynamic(
@@ -49,6 +50,7 @@ export default function Line(props) {
                     <VariantSwitcher data={props.TT} lineType={props.lineType.type}/>
                 </Right>
             </GridContainer>
+            <Footer/>
             <BottomNavbar activePage='/'/>
             <TTTimeModal open={timeModalOpen} data={props.info} closeSwitcher={TTTimeSwitcher}/>
             <LegendModal open={legendModalOpen} closeSwitcher={legendSwitcher}/>

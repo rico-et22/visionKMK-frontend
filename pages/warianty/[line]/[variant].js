@@ -7,6 +7,7 @@ import {GridContainer, Left, Right} from '../../../components/GridContainer'
 import TTInfo from '../../../components/TTInfo'
 import LineList from '../../../components/LineList'
 import StopList from '../../../components/StopList'
+import Footer from '../../../components/Footer'
 import BottomNavbar from '../../../components/BottomNavbar'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
@@ -50,6 +51,7 @@ export default function VariantStops(props) {
                     <StopList data={props.VariantStops}/>
                 </Right>
             </GridContainer>
+            <Footer/>
             <BottomNavbar activePage='/'/>
             <TTTimeModal open={timeModalOpen} data={props.info} closeSwitcher={TTTimeSwitcher}/>
             <LegendModal open={legendModalOpen} closeSwitcher={legendSwitcher}/>

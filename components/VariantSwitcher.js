@@ -60,7 +60,7 @@ function VariantSwitcherLineType(props) {
         return type;
     }
     return (
-        <p className='variant-switcher-line-type'>{determineType(props.data.info[0].lineNumber)}</p>
+        <p className='variant-switcher-line-type'>{determineType(props.data.info.lineNumber)}</p>
     )
 }
 function VariantSwitcherSelector(props) {

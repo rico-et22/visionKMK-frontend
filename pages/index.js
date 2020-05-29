@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import HomeContainer from '../components/HomeContainer'
 import TTInfo from '../components/TTInfo'
 import LineList from '../components/LineList'
+import Footer from '../components/Footer'
 import BottomNavbar from '../components/BottomNavbar'
 import dynamic from 'next/dynamic'
 const TTTimeModal = dynamic(
@@ -42,6 +43,7 @@ export default function Home(props) {
                 <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher}/>
                 <LineList lines={props.lines}/>
             </HomeContainer>
+            <Footer/>
             <BottomNavbar activePage='/'/>
             <TTTimeModal open={timeModalOpen} data={props.info} closeSwitcher={TTTimeSwitcher}/>
             <LegendModal open={legendModalOpen} closeSwitcher={legendSwitcher}/>
