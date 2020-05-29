@@ -47,6 +47,7 @@ export default function Line(props) {
                 </Left>
                 <Right>
                     <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher} mobile/>
+                    <h6 style={{textAlign: 'center', marginBottom: '1.25rem', fontWeight: 'normal'}}>Projekt nieoficjalny / logo KMK wykorzystane w celach pokazowych</h6>
                     <VariantSwitcher data={props.TT} lineType={props.lineType.type}/>
                 </Right>
             </GridContainer>

@@ -52,6 +52,7 @@ export default function TimeTable(props) {
                 </Left>
                 <Right>
                     <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher} mobile/>
+                    <h6 style={{textAlign: 'center', marginBottom: '1.25rem', fontWeight: 'normal'}}>Projekt nieoficjalny / logo KMK wykorzystane w celach pokazowych</h6>
                     <TTHTMLTableContainer data={props.TT}/>
                 </Right>
             </GridContainer>

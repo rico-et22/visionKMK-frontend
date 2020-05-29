@@ -41,6 +41,7 @@ export default function Home(props) {
             <Navbar/>
             <HomeContainer test='xx'>
                 <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher}/>
+                <h6 style={{textAlign: 'center', marginBottom: '1.25rem', fontWeight: 'normal'}}>Projekt nieoficjalny / logo KMK wykorzystane w celach pokazowych</h6>
                 <h1>Widok ulic w budowie</h1>
             </HomeContainer>
             <Footer/>
