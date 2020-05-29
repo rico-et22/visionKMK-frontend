@@ -41,8 +41,7 @@ export default function Home(props) {
             <Navbar/>
             <HomeContainer test='xx'>
                 <TTInfo data={props.info} TTTimeSwitcher={TTTimeSwitcher} legendSwitcher={legendSwitcher}/>
-                <h6 style={{textAlign: 'center', marginBottom: '1.25rem', fontWeight: 'normal'}}>Projekt nieoficjalny / logo KMK wykorzystane w celach pokazowych</h6>
-                <LineList lines={props.lines}/>
+                <h1>Widok przystanków w budowie</h1>
             </HomeContainer>
             <Footer/>
             <BottomNavbar activePage='/'/>
@@ -55,12 +54,9 @@ export default function Home(props) {
 export async function getServerSideProps(context) {
     const resInfo = await fetch(`${APIURL}/info`)
     const info = await resInfo.json()
-    const resLines = await fetch(`${APIURL}/lines`)
-    const lines = await resLines.json()
     return {
         props: {
-            info,
-            lines
+            info
         },
     }
 }
