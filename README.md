@@ -1,6 +1,6 @@
 # visionKMK-frontend
 
-A new, custom frontend for Kraków's public transport timetable website
+A new, custom unofficial frontend for Kraków's public transport timetable website
 
 This frontend uses React + Next.js.
 
