@@ -1,2 +1,2 @@
-const APIURL='http://kamilpawlak.com:8000/timetables';
+const APIURL='http://api.kamilpawlak.com/timetables';
 export default APIURL;
